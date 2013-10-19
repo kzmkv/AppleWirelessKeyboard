@@ -56,7 +56,6 @@ to allow F key toggling like with a wireless keyboard.
 Issues / Missing Functionality
 ------------------------------
 
-* The code using iTunesLib has been commented out. I don't use iTunes nor do I have it installed, therefore I don't have a copy of this library so I couldn't build the code until I removed it. I guess it's possible that the default Windows media key mappings for Eject/Fn+F7-F9 could maybe work with iTunes? No idea.
 * No automatic detection of which keyboard you are using (wired or wireless). I'd like to do this, but don't have a wireless keyboard for reference. You will need to set your config manually.
 * 'Fn' key combos still do not work with a wired keyboard. Use the Eject key to toggle F key functionality or enable the Fn key emulation option to use Eject as a substitute Fn key to access Fn key combos.
 * The "Restart" option is gone. This doesn't have a built-in equivalent in WPF.
