@@ -118,5 +118,17 @@ namespace AppleWirelessKeyboard.Properties {
                 this["EjectAsDelete"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("True")]
+        public bool ShowNotifications {
+            get {
+                return ((bool)(this["ShowNotifications"]));
+            }
+            set {
+                this["ShowNotifications"] = value;
+            }
+        }
     }
 }

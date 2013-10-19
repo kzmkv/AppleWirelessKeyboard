@@ -26,6 +26,9 @@ namespace AppleWirelessKeyboard
         }
         public void ShowOff(Control glyph, bool valueBar = false, int value = 0)
         {
+            if (!AppleWirelessKeyboard.Properties.Settings.Default.ShowNotifications)
+                return;
+
             this.DataContext = new { Glyph = glyph };
 
             if (valueBar) ValueBar.Visibility = System.Windows.Visibility.Visible;
