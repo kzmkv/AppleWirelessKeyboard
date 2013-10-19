@@ -130,5 +130,17 @@ namespace AppleWirelessKeyboard.Properties {
                 this["ShowNotifications"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool FnEject {
+            get {
+                return ((bool)(this["FnEject"]));
+            }
+            set {
+                this["FnEject"] = value;
+            }
+        }
     }
 }

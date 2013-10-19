@@ -38,11 +38,19 @@ namespace AppleWirelessKeyboard
         public static void HandleEject()
         {
             if (!AppleKeyboardHID2.FnDown)
+            {
                 if (AppleWirelessKeyboard.Properties.Settings.Default.EjectAsDelete)
                     KeyboardControl.SendDelete();
                 else
                     FMode = !FMode;
-            else IoControl.EjectAllMedia();
+            }
+            else
+            {
+                if (AppleWirelessKeyboard.Properties.Settings.Default.FnEject)
+                    PowerControl.TurnOffDisplay();
+                else
+                    IoControl.EjectAllMedia();
+            }
         }
 
         public static bool HandleKeyDown(KeyboardListener.KeyHookEventArgs e)
