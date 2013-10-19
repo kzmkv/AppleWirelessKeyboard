@@ -38,7 +38,10 @@ namespace AppleWirelessKeyboard
         public static void HandleEject()
         {
             if (!AppleKeyboardHID2.FnDown)
-                FMode = !FMode;
+                if (AppleWirelessKeyboard.Properties.Settings.Default.EjectAsDelete)
+                    KeyboardControl.SendDelete();
+                else
+                    FMode = !FMode;
             else IoControl.EjectAllMedia();
         }
 
